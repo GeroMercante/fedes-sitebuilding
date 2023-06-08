@@ -28,16 +28,16 @@ function App() {
         <Container>
           <Background>
             <LineContainer
-              initial={{ y: "950px" }}
-              whileInView={{ y: 0 }}
+              initial={{ y: "1080px" }}
+              animate={{ y: 0 }}
               viewport={{ once: false }}
-              transition={{ duration: 0.8 }}
+              transition={{ duration: 0.8, delay: 1 }}
             >
               <Line>
                 <motion.h1
                   className="text-line"
                   initial={{ opacity: 0 }}
-                  whileInView={{ opacity: 1 }}
+                  animate={{ opacity: 1 }}
                   transition={{ duration: 2, delay: 2 }}
                 >
                   Marketing y <span>Comunicación</span>
@@ -46,20 +46,20 @@ function App() {
                   src={LogoLine}
                   alt="Fedes Logo"
                   initial={{ opacity: 0 }}
-                  whileInView={{ opacity: 1 }}
+                  animate={{ opacity: 1 }}
                   transition={{ duration: 2, delay: 2.5 }}
                   className="logo-line"
                 />
                 <motion.div
                   className="line-space"
                   initial={{ opacity: 0 }}
-                  whileInView={{ opacity: 1 }}
+                  animate={{ opacity: 1 }}
                   transition={{ duration: 2, delay: 3 }}
                 ></motion.div>
                 <motion.div
                   className="social-container"
                   initial={{ opacity: 0 }}
-                  whileInView={{ opacity: 1 }}
+                  animate={{ opacity: 1 }}
                   transition={{ duration: 2, delay: 3.5 }}
                 >
                   <a
@@ -124,7 +124,7 @@ function App() {
               className="absolute-container"
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
-              transition={{ delay: 2.5, transition: 2 }}
+              transition={{ delay: 4, transition: 2 }}
             >
               <div className="flecha">
                 <img src={Flecha} alt="Flecha Fedes Agency" />
