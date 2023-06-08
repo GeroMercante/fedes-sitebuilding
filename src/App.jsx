@@ -221,7 +221,7 @@ const Background = styled.div`
       letter-spacing: 1px;
       top: 15px;
     }
-    @media screen and (max-width: 1700px) {
+    @media screen and (max-width: 1400px) {
       bottom: 0;
       left: 204px;
       height: 200px;
@@ -237,7 +237,7 @@ const Background = styled.div`
       }
     }
   }
-  @media screen and (max-width: 1700px) {
+  @media screen and (max-width: 1400px) {
     .logo-fa {
       width: 305px;
       position: absolute;
@@ -272,7 +272,7 @@ const LineContainer = styled(motion.div)`
   justify-content: flex-end;
   align-items: center;
 
-  @media screen and (max-width: 1700px) {
+  @media screen and (max-width: 1400px) {
     width: 200px;
   }
 `;
@@ -384,7 +384,7 @@ const FedesMain = styled.div`
         height: 170px;
       }
     }
-    @media screen and (max-width: 1700px) {
+    @media screen and (max-width: 1400px) {
       .main-text {
         height: 100%;
         display: flex;
@@ -404,7 +404,7 @@ const FedesMain = styled.div`
     }
   }
 
-  @media screen and (max-width: 1700px) {
+  @media screen and (max-width: 1400px) {
     justify-content: center;
     .container-main {
       width: 100%;
