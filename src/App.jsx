@@ -71,7 +71,7 @@ function App() {
                     <img src={Instagram} alt="" />
                   </a>
                   <a
-                    href="https://www.linkedin.com/fedesagency"
+                    href="https://www.linkedin.com/company/fedesagency/"
                     target="_blank"
                     rel="noreferrer"
                     className="social-contain"
@@ -95,7 +95,7 @@ function App() {
                 <motion.div
                   className="main-logo"
                   initial={{ y: "800px" }}
-                  whileInView={{ y: 0 }}
+                  animate={{ y: 0 }}
                   viewport={{ once: false }}
                   transition={{ duration: 1 }}
                 >
@@ -104,7 +104,7 @@ function App() {
                 <motion.div
                   className="main-text"
                   initial={{ y: "-350px", opacity: 0 }}
-                  whileInView={{ y: 0, opacity: 1 }}
+                  animate={{ y: 0, opacity: 1 }}
                   viewport={{ once: false }}
                   transition={{ duration: 2 }}
                 >
@@ -123,14 +123,18 @@ function App() {
             <motion.div
               className="absolute-container"
               initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
+              animate={{ opacity: 1 }}
               transition={{ delay: 4, transition: 2 }}
             >
               <div className="flecha">
                 <img src={Flecha} alt="Flecha Fedes Agency" />
-                <h4>
+                <motion.h4
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  transition={{ delay: 4.5, transition: 2 }}
+                >
                   ¡Contáctanos <br /> y seguínos!
-                </h4>
+                </motion.h4>
               </div>
             </motion.div>
             <motion.img
@@ -138,7 +142,7 @@ function App() {
               alt="Logo Fedes Agency"
               className="logo-fa"
               initial={{ opacity: 0, x: "400px" }}
-              whileInView={{ opacity: 1, x: 0 }}
+              animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 2 }}
             />
             <img
@@ -217,6 +221,45 @@ const Background = styled.div`
       letter-spacing: 1px;
       top: 15px;
     }
+    @media screen and (max-width: 1700px) {
+      bottom: 0;
+      left: 204px;
+      height: 200px;
+      width: 500px;
+      z-index: 10;
+      img {
+        width: 100px;
+        height: 10px;
+      }
+      h4 {
+        font-size: 27px;
+        position: absolute;
+      }
+    }
+  }
+  @media screen and (max-width: 1700px) {
+    .logo-fa {
+      width: 305px;
+      position: absolute;
+      bottom: 15%;
+      right: 8%;
+      z-index: 9999;
+    }
+
+    .punters {
+      width: 455px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 1;
+    }
+    .puntera {
+      width: 750px;
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      z-index: 1;
+    }
   }
 `;
 
@@ -228,6 +271,10 @@ const LineContainer = styled(motion.div)`
   display: flex;
   justify-content: flex-end;
   align-items: center;
+
+  @media screen and (max-width: 1700px) {
+    width: 200px;
+  }
 `;
 
 const Line = styled.div`
@@ -335,6 +382,54 @@ const FedesMain = styled.div`
         width: 100%;
         line-height: 55px;
         height: 170px;
+      }
+    }
+    @media screen and (max-width: 1700px) {
+      .main-text {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 300px;
+        margin-right: 50px;
+        h1 {
+          font-size: 40px;
+          span {
+            font-size: 46px;
+          }
+        }
+        p {
+          font-size: 40px;
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: 1700px) {
+    justify-content: center;
+    .container-main {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      z-index: 999;
+      justify-content: flex-end;
+
+      .main-creando {
+        overflow-y: hidden;
+        position: relative;
+        right: -75px;
+        z-index: -1;
+        img {
+          height: 100vh;
+          width: auto;
+        }
+      }
+
+      .main-logo {
+        overflow-y: hidden;
+        img {
+          height: 90%;
+          width: 350px;
+        }
       }
     }
   }
