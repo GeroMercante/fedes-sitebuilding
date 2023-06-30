@@ -1,8 +1,8 @@
 import { createGlobalStyle } from "styled-components";
 
-import Sohne from '../assets/fonts/SohneRegular.otf';
-import SohneLeicht from '../assets/fonts/Sohneleicht.otf';
-import SohneBold from '../assets/fonts/SohneBold.otf'
+import Sohne from "../assets/fonts/SohneRegular.otf";
+import SohneLeicht from "../assets/fonts/Sohneleicht.otf";
+import SohneBold from "../assets/fonts/SohneBold.otf";
 
 const GlobalStyles = createGlobalStyle`
   @font-face {
@@ -45,6 +45,12 @@ const GlobalStyles = createGlobalStyle`
 
   li{
     list-style: none;
+  }
+
+  @media screen and (max-width: 700px) {
+    *,*::after,*::before,body{
+    overflow: visible;
+  }
   }
 `;
 
